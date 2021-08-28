@@ -1,0 +1,13 @@
+:root {
+    box-sizing: border-box;
+    --main-color: #ff0;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    
+}
