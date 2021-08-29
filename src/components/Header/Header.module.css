@@ -1,0 +1,6 @@
+.header {
+    color: red;
+    padding: .5rem 1rem;
+    background-color: black;
+    min-height: 80px;
+}
