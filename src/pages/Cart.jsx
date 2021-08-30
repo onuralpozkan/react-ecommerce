@@ -1,10 +1,13 @@
 import React from 'react'
+import Layout from '../components/Layout/Layout'
 
 const Cart = () => {
     return (
-        <div>
-            Cart Page
-        </div>
+        <Layout>
+            <div>
+                Cart Page
+            </div>
+        </Layout>
     )
 }
 

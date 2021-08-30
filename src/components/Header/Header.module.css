@@ -3,4 +3,18 @@
     padding: .5rem 1rem;
     background-color: black;
     min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+.login {
+    margin-left: auto;
+    margin-right: 1rem;
+    background-color: salmon;
+    color: royalblue;
+    
+}
+.login,.cart {
+    padding: .5rem;
+    font-size: 1.75rem;
+    cursor: pointer;
 }

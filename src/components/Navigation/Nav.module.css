@@ -1,0 +1,26 @@
+.nav {
+  color: red;
+}
+nav {
+  height: calc(100% - 80px);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 2rem;
+  margin: 0;
+}
+nav ul li {
+  padding: 0.5rem 1rem;
+}
+nav ul li:hover {
+  background-color: saddlebrown;
+}
+
+nav ul li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
