@@ -3,10 +3,13 @@ import { useState } from "react";
 import Nav from "../Navigation/Nav";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const bars = <i class="las la-bars"></i>;
+  const times = <i class="las la-times"></i>;
   return (
     <header className={styles.header}>
-      <span onClick={() => setIsMenuOpen(!isMenuOpen)}>MENU</span>
+      <span onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.menu}>
+        {isMenuOpen ? times : bars} Kategoriler
+      </span>
       <span className={styles.login}>
         <i className="las la-user"></i>
       </span>
