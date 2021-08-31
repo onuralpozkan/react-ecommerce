@@ -1,17 +1,33 @@
 .header {
     color: red;
     padding: .5rem 1rem;
-    background-color: black;
+    background-color: var(--header-bg-color);
     min-height: 80px;
     display: flex;
     align-items: center;
+    position: relative;
+}
+.brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    user-select: none;
+}
+.brand a {
+    text-decoration:none;
+    color: #fff;
 }
 .login {
     margin-left: auto;
     margin-right: 1rem;
-    background-color: salmon;
     color: royalblue;
-    
+    display: block;
+}
+.login:hover {
+    background-color: salmon;
+    border-radius: 2px;
+
 }
 .login,.cart {
     padding: .5rem;
@@ -28,3 +44,13 @@
     font-size: 1.5rem;
     margin-right: .5rem;
 }
+@media screen and (max-width:599px) {
+    .menu span {
+        display: none;
+    }
+    .brand {
+        position: relative;
+        top: 0%;left: 0%;
+        transform: translate(0%,0%);
+    }
+} 

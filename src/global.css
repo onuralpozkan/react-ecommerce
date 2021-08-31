@@ -1,6 +1,13 @@
 :root {
     box-sizing: border-box;
     --main-color: #ff0;
+
+    --header-bg-color:#242526;
+    
+
+    --nav-bg-color:#bababa;
+    --nav-text-color:#000;
+    --nav-link-hover-color:#f00;
 }
 *,
 ::after,
