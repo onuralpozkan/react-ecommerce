@@ -16,7 +16,6 @@ const Home = () => {
     return (
         <Layout>
             <main className={styles.main}>
-                               
                 <Slider />
                 <ProductGroup />
             </main>

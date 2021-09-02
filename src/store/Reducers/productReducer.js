@@ -14,7 +14,6 @@ const productReducer = (state = initialState, action) => {
       return { ...state, isLoading: false, products: action.payload };
     case actionTypes.FETCH_PRODUCTS_FAILURE:
       return { ...state, error: action.payload };
-
     default:
       return state;
   }
