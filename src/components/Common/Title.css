@@ -1,0 +1,28 @@
+.text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+.text-bold {
+    font-weight: 900;
+}
+.text-semibold {
+    font-weight: 700;
+}
+.text-light {
+    font-weight: 300;
+}
+.text-large  {
+    font-size: 1.5rem;
+    line-height: 3rem;}
+.text-medium {
+    font-size: 1.25rem;
+    line-height: 2.5rem;}
+.text-small  {
+    font-size: .75rem;
+    line-height: 1.125rem;
+}
+.text-smallest  {
+    font-size: .5rem;
+    line-height: 1rem;
+}

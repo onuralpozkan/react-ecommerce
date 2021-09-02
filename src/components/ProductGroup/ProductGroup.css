@@ -1,0 +1,12 @@
+.productGroup {
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    align-content: center;
+}
+@media screen and (min-width:500px) {
+    .productGroup {
+        justify-content: space-between;
+    }
+}

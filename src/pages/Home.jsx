@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux'
 import Layout from '../components/Layout/Layout'
+import ProductGroup from '../components/ProductGroup/ProductGroup';
 import Slider from '../components/Slider/Slider';
 import { fetchProducts } from '../store/Actions/productActions';
 import styles from './Home.module.css';
@@ -17,6 +18,7 @@ const Home = () => {
             <main className={styles.main}>
                                
                 <Slider />
+                <ProductGroup />
             </main>
         </Layout>
     )
