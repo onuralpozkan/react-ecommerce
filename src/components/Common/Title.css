@@ -3,6 +3,11 @@
     line-height: 1.5rem;
     font-weight: 400;
 }
+.text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .text-bold {
     font-weight: 900;
 }
