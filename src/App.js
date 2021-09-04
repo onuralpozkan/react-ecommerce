@@ -10,7 +10,7 @@ function App() {
       <Switch>
         <Route path="/product-detail/:productId"><ProductDetail /></Route>
         <Route path="/cart"><Cart /></Route>
-        <Route exact path="/"><Home /></Route>
+        <Route path="/"><Home /></Route>
       </Switch>
       {/* <h1 className={styles.title}>React Project - State: {state}</h1>
       <button onClick={() => dispatch(getCount())}>GetState <i className="las la-edit"></i></button> */}

@@ -762,7 +762,7 @@
         },
         {
             "id": 79,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Dizüstü bilgisayarada gelinen son sokta, oynatmadığı oyun olursa hemen iade",
             "productName": "Monster Tulpar T7 V20.2",
             "unitPrice": "10299.00",
@@ -772,7 +772,7 @@
         },
         {
             "id": 80,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Kalite ve mükemmel tasarım uygun fiyata harika performans.",
             "productName": "Lenovo V15-IIL",
             "unitPrice": "4299.00",
@@ -782,7 +782,7 @@
         },
         {
             "id": 81,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Güçlü donanımıyla ultra seviyelerde oyun oynamak için birebir",
             "productName": "Dell G315",
             "unitPrice": "8299.00",
@@ -792,7 +792,7 @@
         },
         {
             "id": 82,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Son dönemin en çok ses getire, harika tasarımı ve hafif yapısıyla en iyi dostunuz olacak",
             "productName": "Huawei Matebook D 15",
             "unitPrice": "4299.00",
@@ -802,7 +802,7 @@
         },
         {
             "id": 83,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Yüksek Kalite Fotoğrafları Xiaomi Redmi ile Yakalayın",
             "productName": "Xiaomi Redmi Note 9 Pro 128 GB ",
             "unitPrice": "2969.89",
@@ -812,7 +812,7 @@
         },
         {
             "id": 84,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Samsung Galaxy ile Yenilikleri Yakala",
             "productName": "Samsung Galaxy M31 2020 128 GB",
             "unitPrice": "2799.00",
@@ -822,7 +822,7 @@
         },
         {
             "id": 85,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Huawei P30 Lite Herkes için En İdeal",
             "productName": "Huawei P30 Lite 128 GB",
             "unitPrice": "2699.00",
@@ -832,7 +832,7 @@
         },
         {
             "id": 86,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Oppo'dan Bir Amiral Gemisi Daha",
             "productName": "Oppo Reno2 Z 128 GB",
             "unitPrice": "3599.90",
@@ -842,7 +842,7 @@
         },
         {
             "id": 87,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Vestel 50 inc 126 Ekran ile Evinize 4k Çöüzünürlüğün Keyfini Taşıyın",
             "productName": "Vestel 50U9400 50'' 126 Ekran Uydu Alıcılı 4K Ultra HD Smart LED TV",
             "unitPrice": "2999.01",
@@ -852,7 +852,7 @@
         },
         {
             "id": 88,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Uydu Alıcılı Full HD Led Dijitsu bu Fiyata Kaçmaz",
             "productName": "Dijitsu DJTV43F 43'' 109 Ekran Uydu Alıcılı Full HD LED TV",
             "unitPrice": "1399.00",
@@ -862,7 +862,7 @@
         },
         {
             "id": 89,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Fiyat / Performans Arayanlar için Bire Bir",
             "productName": "Awox 32'' 82 Ekran A203200 Uydu Alıcılı HD LED TV",
             "unitPrice": "845.00",
@@ -872,7 +872,7 @@
         },
         {
             "id": 90,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Samsung Kalitesiyle 49 inç Smart TV Keyfi",
             "productName": "Samsung 49RU7300 49'' Uydu Alıcılı Curved 4K Ultra HD Smart LED TV",
             "unitPrice": "4798.52",
@@ -882,7 +882,7 @@
         },
         {
             "id": 91,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "PLaystation 4 Slim ile Oyun Keyfi Her Yerde",
             "productName": "Sony Playstation 4 Slim 500 GB Oyun Konsolu-Türkçe Menü",
             "unitPrice": "2898.00",
@@ -892,7 +892,7 @@
         },
         {
             "id": 92,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "4K Destekli Oyunlar için Playstation Pro Kaçmaz",
             "productName": "Sony Playstation 4 Pro 1 TB Oyun  Konsol - Türkçe Menü",
             "unitPrice": "3799.00",
@@ -902,7 +902,7 @@
         },
         {
             "id": 93,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Yeni ve Gelişmiş Xbox One ile Ultra HD Oyun Keyfi",
             "productName": "Microsoft XBox One S 1TB UHD 4K",
             "unitPrice": "4699.00",
@@ -912,7 +912,7 @@
         },
         {
             "id": 94,
-            "categoryID": 9,
+            "categoryId": 9,
             "description": "Xbox - Oyuncuların vazgeçilmezi.",
             "productName": "Microsoft Xbox 360 Slim 250Gb + Xbox 360 Kinect",
             "unitPrice": "1699.00",

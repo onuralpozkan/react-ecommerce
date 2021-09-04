@@ -6,9 +6,8 @@ const Slider = () => {
   const [images, setImages] = useState([]);
   const [dots, setDots] = useState([]);
   useEffect(() => {
-
     setImages(document.querySelectorAll("img"));
-    setDots(document.querySelectorAll('.dot'));
+    setDots(document.querySelectorAll(".dot"));
   }, []);
 
   let imgIndex = 0;
@@ -21,28 +20,27 @@ const Slider = () => {
     images.forEach((slide) => (slide.className = ""));
     images[imgIndex].classList.add("active");
     dots.forEach((dot) => (dot.className = "dot"));
-    dots[imgIndex].classList.add('fill');
-
+    dots[imgIndex].classList.add("fill");
   };
 
   return (
     <div className="slider-container">
-      <Link to="/beverages">
+      <Link to="/categories/beverages-1">
         <img
           className="active"
-          src="assets/images/slider_images/beverages.jpg"
+          src="/assets/images/slider_images/beverages.jpg"
           alt="Beverages"
         />
       </Link>
-      <Link to="/condi">
+      <Link to="/categories/condiments-2">
         <img
-          src="assets/images/slider_images/condiments.jpg"
+          src="/assets/images/slider_images/condiments.jpg"
           alt="Condiments"
         />
       </Link>
-      <Link to="/sfers">
+      <Link to="/categories/electronics-9">
         <img
-          src="assets/images/slider_images/electronics.jpg"
+          src="/assets/images/slider_images/electronics.jpg"
           alt="Electronics"
         />
       </Link>

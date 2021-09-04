@@ -6,7 +6,6 @@ import { Title } from "../Common/Title";
 
 const ProductCard = ({id,productName, description, unitPrice, isLoading}) => {
 
-  console.log('isLoad',isLoading);
   const [isHover, setIsHover] = useState(false);
   return (
     <Link className="card-link" to={`/product-detail/${id}`}>
@@ -16,7 +15,7 @@ const ProductCard = ({id,productName, description, unitPrice, isLoading}) => {
       onMouseLeave={() => setIsHover(false)}
       >
       <div className="card-header">
-        <img src={`assets/images/products/generic_${id % 4}.jpg`} alt="Product Name" />
+        <img src={`/assets/images/products/generic_${id % 4}.jpg`} alt="Product Name" />
       </div>
       <div className="card-body">
         <Title cssClass="text text-bold text-large text-ellipsis" text={isLoading ? "...Loading" : productName} />
