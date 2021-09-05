@@ -20,10 +20,13 @@ const ProductCard = ({
         onMouseLeave={() => setIsHover(false)}
       >
         <div className="card-header">
+          {
+            isLoading ? "Yükleniii.." :
           <img
             src={`/assets/images/products/generic_${id % 4}.jpg`}
             alt="Product Name"
           />
+          }
         </div>
         <div className="card-body">
           <Title

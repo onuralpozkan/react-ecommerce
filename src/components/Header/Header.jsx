@@ -18,7 +18,9 @@ const Header = () => {
         <i className="las la-user"></i>
       </span>
       <span className={styles.cart}>
-        <i class="las la-shopping-cart"></i>
+        <Link to="/cart">
+          <i class="las la-shopping-cart"></i>
+        </Link>
       </span>
 
       <Nav clsName={isMenuOpen && "open"} />

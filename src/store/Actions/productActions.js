@@ -26,8 +26,8 @@ export const fetchProducts = () => {
       const url = "http://localhost:8000/products";
       const response = await axios.get(url);
       const apiData = response?.data;
-      console.log("Pro Action");
-      console.log(apiData);
+      // console.log("Pro Action");
+      // console.log(apiData);
       dispatch({
         type: actionTypes.FETCH_PRODUCTS_SUCCESS,
         payload: apiData,
@@ -39,7 +39,7 @@ export const fetchProducts = () => {
 };
 
 export const getProductById = (id) => {
-  console.log("getProId",id);
+  //console.log("getProId",id);
   return {
     type:actionTypes.GET_PRODUCT_BY_ID,
     payload: id

@@ -1,11 +1,6 @@
 import * as actionTypes from "../Actions/actionTypes";
+import { initialState } from "./initialState";
 
-const initialState = {
-  products: [],
-  error: null,
-  isLoading: false,
-  product: [],
-};
 
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -15,12 +10,6 @@ const productReducer = (state = initialState, action) => {
       return { ...state, isLoading: false, products: action.payload };
     case actionTypes.FETCH_PRODUCTS_FAILURE:
       return { ...state, error: action.payload };
-    case actionTypes.GET_PRODUCT_BY_ID:
-      const product = state.products.filter(
-        (item) => item.id == action.payload
-      );
-      console.log("payload", action.payload);
-      return { ...state, product };
     default:
       return state;
   }

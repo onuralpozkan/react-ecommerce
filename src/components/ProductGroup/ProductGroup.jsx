@@ -10,6 +10,8 @@ import "./ProductGroup.css";
 const ProductGroup = ({ categoryId }) => {
   const { products, isLoading } = useProducts();
 
+  console.log('is LOading', isLoading);
+
   const productGroup = categoryId
     ? products.filter((i) => i.categoryId == categoryId)
     : products;
