@@ -43,7 +43,8 @@
 }
 .detail-count input {
     padding: .5rem;
-    width: 3rem;
+    text-align: center;
+    width: 2.5rem;
     border: none;
     outline: none;
     border-left: 1px solid var(--border-color);

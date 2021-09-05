@@ -1,0 +1,15 @@
+.productTable,.productTable th,.productTable td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: .5rem 1rem;
+}
+
+.productTable tr td:first-child {
+    text-align: left;
+    padding-left: .5rem;
+}
+.productTable {
+    max-width: 900px;
+    margin: 2rem auto;
+}

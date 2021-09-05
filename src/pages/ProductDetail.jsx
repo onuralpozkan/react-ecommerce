@@ -68,6 +68,7 @@ const ProductDetail = () => {
               type="text"
               name="productCount"
               value={productCount}
+              disabled
               onChange={(e) => setProductCount(e.target.count)}
             />
             <i className="las la-plus" onClick={() => handleCount(+1)}></i>

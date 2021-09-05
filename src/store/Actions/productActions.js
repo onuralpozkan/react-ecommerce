@@ -18,7 +18,6 @@ export const fetchProductSuccess = ({ data }) => {
     payload: data,
   };
 };
-
 export const fetchProducts = () => {
   return async (dispatch) => {
     try {
