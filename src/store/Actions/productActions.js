@@ -37,3 +37,11 @@ export const fetchProducts = () => {
     }
   };
 };
+
+export const getProductById = (id) => {
+  console.log("getProId",id);
+  return {
+    type:actionTypes.GET_PRODUCT_BY_ID,
+    payload: id
+  }
+}

@@ -1,0 +1,58 @@
+.detail-container {
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-flow: row wrap;   
+    margin: 2rem;
+    padding: 2rem;
+}
+.detail-image {
+    flex: 2;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.detail-image img {
+    max-width: 340px;
+}
+.detail-info {
+    flex: 3;
+    min-width: 340px;
+    padding: 0 1rem;
+}
+.detail-count {
+    
+    border: 1px solid var(--border-color);
+    width: max-content;
+    border-radius: 2px;
+}
+.detail-count  i {
+    padding: .5rem;
+    font-size: 1rem;
+    color: #ababab;
+    cursor: pointer;
+
+}
+.detail-count i:hover {
+    color: #000;
+}
+.detail-count i:active {
+    transform: scale(1.2,1.2);
+    
+}
+.detail-count input {
+    padding: .5rem;
+    width: 3rem;
+    border: none;
+    outline: none;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.detail-actions {
+    display: flex;
+}
+.detail-actions button  {
+    margin-right: 1rem;
+}

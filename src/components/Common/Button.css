@@ -38,3 +38,6 @@
 .btn-info {
   background-color: var(--info-color);
 }
+.btn-primary,.btn-secondary,.btn-danger {
+  color: #fff !important;
+}

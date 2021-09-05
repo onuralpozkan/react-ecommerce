@@ -5,9 +5,11 @@ import "./global.css";
 import store from "./store";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ScrollToTop } from "./utils/ScrollToTop";
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={store}>  
     <Router>
+      <ScrollToTop />
       <React.StrictMode>
         <App />
       </React.StrictMode>

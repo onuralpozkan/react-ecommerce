@@ -1,20 +1,15 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import useFetch from "../../hooks/useFetch";
+import useProducts from "../../hooks/useProducts";
 import { fetchProducts } from "../../store/Actions/productActions";
 import { Title } from "../Common/Title";
 import ProductCard from "../PorductCard/ProductCard";
 import "./ProductGroup.css";
 
 const ProductGroup = ({ categoryId }) => {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state.productReducer);
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
-  const { products, isLoading } = state;
+  const { products, isLoading } = useProducts();
 
-  console.log('proGroup', categoryId == " ");
   const productGroup = categoryId
     ? products.filter((i) => i.categoryId == categoryId)
     : products;

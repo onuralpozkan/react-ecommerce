@@ -10,16 +10,14 @@ const Nav = ({ clsName }) => {
     transform: clsName === "open" ? "translateX(0%)" : "translateX(-100%)",
     transition: "transform .2s ease-in",
   };
-  const toTop = () => {
-    window.scrollTo(0,340)
-  }
+
   return (
     <nav style={navStyles}>
       <ul>
         {isLoading
           ? "Loading..."
           : data.map((category) => (
-              <li key={category.id} onClick={toTop}>
+              <li key={category.id}>
                 <Link to={`/categories/${category.seoUrl}-${category.id}`}>{category.categoryName}</Link>
               </li>
             ))}
