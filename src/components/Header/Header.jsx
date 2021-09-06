@@ -11,6 +11,7 @@ const Header = () => {
   const state = useSelector((state) => state.cartReducer);
 
   return (
+    <>
     <header className="header">
       <span onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu">
         {isMenuOpen ? times : bars} <span>Kategoriler</span>
@@ -30,8 +31,10 @@ const Header = () => {
         {state.length !== 0 && <span className="cartInfo">{state.length}</span>}
       </span>
 
-      <Nav clsName={isMenuOpen && "open"} />
+      <Nav clsName={isMenuOpen && "open"} closeMenu={()=>setIsMenuOpen(false)}/>
     </header>
+    {isMenuOpen && <div className="menu-overlay" onClick={()=>setIsMenuOpen(false)}></div>}
+    </>
   );
 };
 

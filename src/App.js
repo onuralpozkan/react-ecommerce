@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 function App() {
 
   return (
-    <div className="App">
+    <div className="App" style={{position:'relative'}}>
       <Switch>
         <Route path="/product-detail/:productId"><ProductDetail /></Route>
         <Route path="/login"><Login /></Route>
