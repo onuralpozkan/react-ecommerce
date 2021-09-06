@@ -1,3 +1,5 @@
+
+import { currencySymbol } from "../../utils/currencySymbol";
 import { Button } from "../Common/Button";
 import "./FilledCart.css";
 const FilledCart = ({ products, deleteProduct }) => {
@@ -6,6 +8,8 @@ const FilledCart = ({ products, deleteProduct }) => {
   console.log('totalPC',totalPrice);
   return (
     <table className="productTable">
+
+      
       <thead>
         <tr>
           <th>Ürün Adı</th>
@@ -19,7 +23,7 @@ const FilledCart = ({ products, deleteProduct }) => {
           <tr key={product.id}>
             <td>{product.productName}</td>
             <td>{productCount}</td>
-            <td>{product.unitPrice}</td>
+            <td>{currencySymbol(product.unitPrice)}</td>
             <td>
               <Button
                 label="Sil"
@@ -47,7 +51,7 @@ const FilledCart = ({ products, deleteProduct }) => {
             Total Tutar:
           </td>
           <td colSpan="2">
-            {totalPrice}
+            {currencySymbol(totalPrice)}
           </td>
         </tr>
       </tfoot>

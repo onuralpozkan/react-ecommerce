@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { Button } from "../Common/Button";
 import { Title } from "../Common/Title";
 import { addProductToCart } from "../../store/Actions/cartActions";
+import { currencySymbol } from "../../utils/currencySymbol";
 
 const ProductCard = ({
  product,
@@ -12,7 +13,6 @@ const ProductCard = ({
 }) => {
   const dispatch = useDispatch();
   const [isHover, setIsHover] = useState(false);
- 
   return (
     <div
         className="card"
@@ -43,7 +43,7 @@ const ProductCard = ({
           ) : (
             <Title
               cssClass="text text-bold text-medium"
-              text={isLoading ? "...Loading" : `${product.unitPrice} TL`}
+              text={isLoading ? "...Loading" : currencySymbol(product.unitPrice) }
             />
           )}
         </div>
