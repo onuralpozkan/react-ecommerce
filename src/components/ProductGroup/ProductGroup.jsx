@@ -23,7 +23,7 @@ const ProductGroup = ({ categoryId }) => {
     <div className="productGroup">
       <div className="productGroup-title">
         <Title
-          text={categoryId ? category[0]?.categoryName : "All Products"}
+          text={categoryId ? category[0]?.categoryNameTr : "Tüm Ürünler"}
           cssClass="text-largest fullWidth"
         />
       </div>

@@ -18,7 +18,7 @@ const Nav = ({ clsName }) => {
           ? "Loading..."
           : data.map((category) => (
               <li key={category.id}>
-                <Link to={`/categories/${category.seoUrl}-${category.id}`}>{category.categoryName}</Link>
+                <Link to={`/categories/${category.seoUrl}-${category.id}`}>{category.categoryNameTr}</Link>
               </li>
             ))}
       </ul>

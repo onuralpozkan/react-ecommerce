@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import ProductGroup from "../components/ProductGroup/ProductGroup";
 import Slider from "../components/Slider/Slider";
-import styles from "./Home.module.css";
+import "./Home.css";
 
 const Home = () => {
   const { pathname } = useLocation();
@@ -10,7 +10,7 @@ const Home = () => {
   
   return (
     <Layout>
-      <main className={styles.main}>
+      <main className="main">
         <Slider />
         <ProductGroup
           categoryId={pathname == '/' ? false 

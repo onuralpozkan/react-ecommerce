@@ -1,9 +1,0 @@
-.main {
-    position: relative;
-    top: 80px;
-}
-.products {
-    background-color: red;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}

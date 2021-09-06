@@ -13,7 +13,7 @@ const Cart = () => {
   };
   return (
     <Layout>
-      <div style={{ position: "relative", top: "80px" }}>
+      <div className="top-fix">
         {state.length ? (
           <FilledCart products={state} deleteProduct={deleteProduct} />
         ) : (
