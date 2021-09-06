@@ -8,6 +8,7 @@
   --nav-bg-color: #bababa;
   --nav-text-color: #000;
   --nav-link-hover-color: #f00;
+  --nav-link-bg-color: steelblue;
 
 
   --box-shadow: 0px 0px 8px 2px #3b3b3b;
@@ -22,9 +23,10 @@
   --warning-color:#e2d408;
   --info-color:#1cdf2c;
   --success-color:#19cf99;
+  --light-color:#ffffff;
 
 
-  --cart-color: #2b55c7;
+  --icon-hover-bg-color: green;
 
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

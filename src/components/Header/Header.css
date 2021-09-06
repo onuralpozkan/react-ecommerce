@@ -1,5 +1,4 @@
 .header {
-    color: red;
     padding: .5rem 1rem;
     background-color: var(--header-bg-color);
     min-height: 80px;
@@ -17,22 +16,19 @@
     left: 50%;
     transform: translate(-50%,-50%);
     user-select: none;
+    font-size: 1.25rem;
+    padding: .5rem 1rem;
 }
 .brand a {
     text-decoration:none;
-    color: #fff;
 }
+
 .login {
     margin-left: auto;
     margin-right: 1rem;
-    color: royalblue;
     display: block;
 }
-.login:hover {
-    background-color: salmon;
-    border-radius: 2px;
 
-}
 .login,.cart {
     padding: .5rem;
     font-size: 2rem;
@@ -45,16 +41,25 @@
     user-select: none;
 }
 .menu i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-right: .5rem;
+    color: var(--light-color);
 }
 
 .cart {
     position: relative;
     
 }
-.cart a {
-    color: var(--cart-color);
+.cart,.login,.brand {
+    transition: all .3s ease-in;
+}
+.cart:hover,.login:hover,.brand:hover {
+    background-color: var(--icon-hover-bg-color);
+    border-radius: 2px;
+    transition: all ease-in;
+}
+.cart a,.login a,.brand a {
+    color: var(--light-color);
 }
 .cartInfo {
     position: absolute;
@@ -64,11 +69,11 @@
     padding: .2rem;
     z-index: 88;
     font-size: 1rem;
-    background-color: red;
+    background-color: var(--danger-color);
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
-    color: greenyellow;
+    color: var(--light-color);
     font-weight: 600;
 }
 .menu-overlay {
@@ -93,5 +98,8 @@
         position: relative;
         top: 0%;left: 0%;
         transform: translate(0%,0%);
+    }
+    .menu i {
+        margin-right: 1.5rem;
     }
 } 
