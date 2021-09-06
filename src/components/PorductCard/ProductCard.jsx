@@ -42,7 +42,7 @@ const ProductCard = ({
             <Button label="Sepete Ekle" cssClass="btn btn-primary btn-block" handleClick={()=> dispatch(addProductToCart({product, productCount: 1}))} />
           ) : (
             <CustomText
-              cssClass="text text-bold text-medium"
+              cssClass="text text-bold text-medium price-container"
               text={isLoading ? "...Loading" : currencySymbol(product.unitPrice) }
             />
           )}

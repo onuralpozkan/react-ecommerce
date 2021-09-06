@@ -1,6 +1,6 @@
 import "./Login.css";
 import Layout from "../components/Layout/Layout";
-import { Cust, CustomTextomText } from "../components/Common/CustomText";
+import { CustomText } from "../components/Common/CustomText";
 import { Button } from "../components/Common/Button";
 
 const Login = () => {

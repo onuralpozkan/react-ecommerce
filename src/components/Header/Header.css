@@ -1,105 +1,108 @@
 .header {
-    padding: .5rem 1rem;
-    background-color: var(--header-bg-color);
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    
+  padding: 0.5rem 1rem;
+  background-color: var(--header-bg-color);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 .brand {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    user-select: none;
-    font-size: 1.25rem;
-    padding: .5rem 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
 }
 .brand a {
-    text-decoration:none;
+  text-decoration: none;
 }
 
 .login {
-    margin-left: auto;
-    margin-right: 1rem;
-    display: block;
+  margin-left: auto;
+  margin-right: 1rem;
+  display: block;
 }
 
-.login,.cart {
-    padding: .5rem;
-    font-size: 2rem;
-    cursor: pointer;
+.login,
+.cart {
+  padding: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
 .menu {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  color: var(--light-color);
 }
 .menu i {
-    font-size: 2rem;
-    margin-right: .5rem;
-    color: var(--light-color);
+  font-size: 2rem;
+  margin-right: 0.5rem;
 }
 
 .cart {
-    position: relative;
-    
+  position: relative;
 }
-.cart,.login,.brand {
-    transition: all .3s ease-in;
+.cart,
+.login,
+.brand {
+  transition: all 0.3s ease-in;
 }
-.cart:hover,.login:hover,.brand:hover {
-    background-color: var(--icon-hover-bg-color);
-    border-radius: 2px;
-    transition: all ease-in;
+.cart:hover,
+.login:hover,
+.brand:hover {
+  background-color: var(--icon-hover-bg-color);
+  border-radius: 2px;
+  transition: all ease-in;
 }
-.cart a,.login a,.brand a {
-    color: var(--light-color);
+.cart a,
+.login a,
+.brand a {
+  color: var(--light-color);
 }
 .cartInfo {
-    position: absolute;
-    top: .25rem;
-    right: 0;
-    text-align: center;
-    padding: .2rem;
-    z-index: 88;
-    font-size: 1rem;
-    background-color: var(--danger-color);
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    color: var(--light-color);
-    font-weight: 600;
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+  text-align: center;
+  padding: 0.2rem;
+  z-index: 88;
+  font-size: 1rem;
+  background-color: var(--danger-color);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--light-color);
+  font-weight: 600;
 }
 .menu-overlay {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    min-height: 100%;
-    z-index: 9;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  z-index: 9;
+}
+
+@media screen and (max-width: 599px) {
+  .menu span {
+    display: none;
   }
-
-
-
-
-@media screen and (max-width:599px) {
-    .menu span {
-        display: none;
-    }
-    .brand {
-        position: relative;
-        top: 0%;left: 0%;
-        transform: translate(0%,0%);
-    }
-    .menu i {
-        margin-right: 1.5rem;
-    }
-} 
+  .brand {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
+  .menu i {
+    margin-right: 1.5rem;
+  }
+}

@@ -12,28 +12,38 @@ const Header = () => {
 
   return (
     <>
-    <header className="header">
-      <span onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu">
-        {isMenuOpen ? times : bars} <span>Kategoriler</span>
-      </span>
-      <span className="brand">
-        <Link to="/">Brand</Link>
-      </span>
-      <span className="login">
-        <Link to="/login">
-        <i className="las la-user"></i>
-        </Link>
-      </span>
-      <span className="cart">
-        <Link to="/cart">
-          <i class="las la-shopping-cart"></i>
-        </Link>
-        {state.length !== 0 && <span className="cartInfo">{state.length}</span>}
-      </span>
+      <header className="header">
+        <span onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu">
+          {isMenuOpen ? times : bars} <span>Kategoriler</span>
+        </span>
+        <span className="brand">
+          <Link to="/">Brand</Link>
+        </span>
+        <span className="login">
+          <Link to="/login">
+            <i className="las la-user"></i>
+          </Link>
+        </span>
+        <span className="cart">
+          <Link to="/cart">
+            <i class="las la-shopping-cart"></i>
+          </Link>
+          {state.length !== 0 && (
+            <span className="cartInfo">{state.length}</span>
+          )}
+        </span>
 
-      <Nav clsName={isMenuOpen && "open"} closeMenu={()=>setIsMenuOpen(false)}/>
-    </header>
-    {isMenuOpen && <div className="menu-overlay" onClick={()=>setIsMenuOpen(false)}></div>}
+        <Nav
+          clsName={isMenuOpen && "open"}
+          closeMenu={() => setIsMenuOpen(false)}
+        />
+      </header>
+      {isMenuOpen && (
+        <div
+          className="menu-overlay"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
     </>
   );
 };

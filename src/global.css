@@ -3,12 +3,13 @@
   box-sizing: border-box;
   --main-color: #ff0;
 
-  --header-bg-color: #242526;
+  --header-bg-color: #2666b9;
 
-  --nav-bg-color: #bababa;
-  --nav-text-color: #000;
-  --nav-link-hover-color: #f00;
-  --nav-link-bg-color: steelblue;
+  --nav-bg-color: #fff;
+  --nav-text-color: #424242;
+  --nav-link-hover-bg-color: #eee;
+  --nav-link-hover-color: #000;
+  --nav-link-bg-color: #fff;
 
 
   --box-shadow: 0px 0px 8px 2px #3b3b3b;
@@ -16,17 +17,19 @@
   --border-color: #cbccbc;
   font-size: 12px;
 
+  --price-bg:#b6b6b68c;
+  --price-container-bg:#b6b6b6;
 
-  --primary-color:#3080e9;
-  --secondary-color:#444444;
-  --danger-color:#c71e1e;
-  --warning-color:#e2d408;
-  --info-color:#1cdf2c;
-  --success-color:#19cf99;
-  --light-color:#ffffff;
+  --primary-color:#0277bd;
+  --secondary-color:#424242;
+  --danger-color:#d50000;
+  --warning-color:#ffd600;
+  --info-color:#00796b;
+  --success-color:#2e7d32;
+  --light-color:#fff;
 
 
-  --icon-hover-bg-color: green;
+  --icon-hover-bg-color: #3986eb;
 
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
