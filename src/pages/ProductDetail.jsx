@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { Title } from "../components/Common/Title";
+import { CustomText } from "../components/Common/CustomText";
 import useProducts from "../hooks/useProducts";
 import Layout from "../components/Layout/Layout";
 import "./ProductDetail.css";
@@ -57,11 +57,11 @@ const ProductDetail = () => {
         </div>
 
         <div className="detail-info">
-          <Title
+          <CustomText
             text={product[0]?.productName}
             cssClass="text-large text-bold"
           />
-          <Title text={product[0]?.description} cssClass="text text-medium" />
+          <CustomText text={product[0]?.description} cssClass="text text-medium" />
           <div className="detail-count">
             <i className="las la-minus" onClick={() => handleCount(-1)}></i>
             <input

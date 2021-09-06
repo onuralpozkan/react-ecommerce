@@ -1,6 +1,6 @@
 import { useHistory } from "react-router";
 import { Button } from "../Common/Button";
-import { Title } from "../Common/Title";
+import { CustomText } from "../Common/CustomText";
 import "./EmptyCart.css";
 
 const EmptyCart = () => {
@@ -8,8 +8,8 @@ const EmptyCart = () => {
   return (
     <div className="emptyCart">
       <div className="emptyCart-left">
-        <Title text="Sepetinizde ürün bulunmamaktadır." cssClass="text-large" />
-        <Title
+        <CustomText text="Sepetinizde ürün bulunmamaktadır." cssClass="text-large" />
+        <CustomText
           text="Alışverişe devam etmek için anasayfaya gidebilir ve diğer
               uygun fiyatlı ürünlere göz atabilirsiniz."
           cssClass="text"

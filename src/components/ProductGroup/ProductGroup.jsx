@@ -1,6 +1,6 @@
 import useFetch from "../../hooks/useFetch";
 import useProducts from "../../hooks/useProducts";
-import { Title } from "../Common/Title";
+import { CustomText } from "../Common/CustomText";
 import ProductCard from "../PorductCard/ProductCard";
 import "./ProductGroup.css";
 
@@ -17,7 +17,7 @@ const ProductGroup = ({ categoryId }) => {
   return (
     <div className="productGroup">
       <div className="productGroup-title">
-        <Title
+        <CustomText
           text={categoryId ? category[0]?.categoryNameTr : "Tüm Ürünler"}
           cssClass="text-largest fullWidth"
         />

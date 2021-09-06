@@ -1,6 +1,6 @@
 import "./Login.css";
 import Layout from "../components/Layout/Layout";
-import { Title } from "../components/Common/Title";
+import { Cust, CustomTextomText } from "../components/Common/CustomText";
 import { Button } from "../components/Common/Button";
 
 const Login = () => {
@@ -9,7 +9,7 @@ const Login = () => {
       <div className="login-page top-fix">
         <form>
           <div className="form-title">
-            <Title cssClass="text-large" text="Kullanıcı Girişi" />
+            <CustomText cssClass="text-large" text="Kullanıcı Girişi" />
           </div>
           <div className="input-field">
             <input

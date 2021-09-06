@@ -3,7 +3,7 @@ import "./ProductCard.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button } from "../Common/Button";
-import { Title } from "../Common/Title";
+import { CustomText } from "../Common/CustomText";
 import { addProductToCart } from "../../store/Actions/cartActions";
 import { currencySymbol } from "../../utils/currencySymbol";
 
@@ -30,18 +30,18 @@ const ProductCard = ({
           }
         </div>
         <div className="card-body">
-          <Title
+          <CustomText
             cssClass="text text-bold text-large text-ellipsis"
             text={isLoading ? "...Loading" : product.productName}
           />
-          <Title cssClass="text text-ellipsis" text={product.description} />
+          <CustomText cssClass="text text-ellipsis" text={product.description} />
         </div>
           </Link>
         <div className="card-footer">
           {isHover ? (
             <Button label="Sepete Ekle" cssClass="btn btn-primary btn-block" handleClick={()=> dispatch(addProductToCart({product, productCount: 1}))} />
           ) : (
-            <Title
+            <CustomText
               cssClass="text text-bold text-medium"
               text={isLoading ? "...Loading" : currencySymbol(product.unitPrice) }
             />

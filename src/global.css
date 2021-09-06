@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 :root {
   box-sizing: border-box;
   --main-color: #ff0;
@@ -24,6 +25,9 @@
 
 
   --cart-color: #2b55c7;
+
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 *,
 ::after,
@@ -40,6 +44,7 @@ h4,
 h5,
 h6 {
   font-size: 1rem;
+  font-family: 'Noto Serif', serif;
 }
 .top-fix {
   position: relative;

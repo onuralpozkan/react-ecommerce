@@ -1,5 +1,5 @@
 import { Icon } from "../Common/Icon";
-import { Title } from "../Common/Title";
+import { CustomText } from "../Common/CustomText";
 import "./Footer.css";
 // Lineawsome Classes For Social Media Icons
 const lineAwesomeClasses = [
@@ -14,10 +14,10 @@ const socialMediaIcons = lineAwesomeClasses.map((item, index) => (
 ));
 const Footer = () => (
   <footer>
-    <Title text="Brand" cssClass="text-largest" />
-    <Title text={footDescription} cssClass="text" />
+    <CustomText text="Brand" cssClass="text-largest" />
+    <CustomText text={footDescription} cssClass="text" />
     <div className="followUs">
-      <Title text="Bizi Takip Edin" cssClass="text-large" />
+      <CustomText text="Bizi Takip Edin" cssClass="text-large" />
       <div className="socialMedia">{socialMediaIcons}</div>
     </div>
   </footer>
