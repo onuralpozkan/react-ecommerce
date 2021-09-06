@@ -5,6 +5,7 @@
   border-radius: 4px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .btn-small {
   padding: 0.25rem 5rem;

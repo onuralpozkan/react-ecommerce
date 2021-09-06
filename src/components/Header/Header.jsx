@@ -27,7 +27,7 @@ const Header = () => {
         <Link to="/cart">
           <i class="las la-shopping-cart"></i>
         </Link>
-        <span className="cartInfo">{state.length}</span>
+        {state.length !== 0 && <span className="cartInfo">{state.length}</span>}
       </span>
 
       <Nav clsName={isMenuOpen && "open"} />

@@ -1,13 +1,16 @@
 import { Button } from "../Common/Button";
 import "./FilledCart.css";
 const FilledCart = ({ products, deleteProduct }) => {
+  const totalAmount = products.reduce((prev,next) => (prev + parseInt(next.productCount)), 0)
+  const totalPrice = products.reduce((prev,next) => (prev + parseFloat(next.product.unitPrice * next.productCount)), 0)
+  console.log('totalPC',totalPrice);
   return (
     <table className="productTable">
       <thead>
         <tr>
           <th>Ürün Adı</th>
           <th>Miktarı</th>
-          <th>Fiyatı</th>
+          <th>Birim Fiyatı</th>
           <th>Sepetten Çıkar</th>
         </tr>
       </thead>
@@ -20,13 +23,34 @@ const FilledCart = ({ products, deleteProduct }) => {
             <td>
               <Button
                 label="Sil"
-                cssClass="btn btn-danger btn-block"
+                cssClass="btn btn-block btn-danger"
                 handleClick={() => deleteProduct(product.id)}
               />
             </td>
           </tr>
         ))}
       </tbody>
+      <tfoot>
+        <tr>
+          <th colSpan="4" style={{textAlign:'right'}}>Sipariş Özeti</th>
+        </tr>
+        <tr>
+          <td colSpan="2">
+            Total Ürün:
+          </td>
+          <td colSpan="2">
+            {totalAmount}
+          </td>
+        </tr>
+        <tr>
+          <td colSpan="2">
+            Total Tutar:
+          </td>
+          <td colSpan="2">
+            {totalPrice}
+          </td>
+        </tr>
+      </tfoot>
     </table>
   );
 };

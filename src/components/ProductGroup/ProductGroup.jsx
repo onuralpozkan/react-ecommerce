@@ -1,16 +1,11 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import useFetch from "../../hooks/useFetch";
 import useProducts from "../../hooks/useProducts";
-import { fetchProducts } from "../../store/Actions/productActions";
 import { Title } from "../Common/Title";
 import ProductCard from "../PorductCard/ProductCard";
 import "./ProductGroup.css";
 
 const ProductGroup = ({ categoryId }) => {
   const { products, isLoading } = useProducts();
-
-  console.log('is LOading', isLoading);
 
   const productGroup = categoryId
     ? products.filter((i) => i.categoryId == categoryId)
@@ -28,7 +23,7 @@ const ProductGroup = ({ categoryId }) => {
         />
       </div>
       {productGroup.map((product) => (
-        <ProductCard key={product.id} {...product} isLoading={isLoading} />
+        <ProductCard key={product.id} product={product} isLoading={isLoading} />
       ))}
     </div>
   );
