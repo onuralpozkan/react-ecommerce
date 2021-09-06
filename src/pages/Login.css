@@ -1,0 +1,29 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+}
+.form-title {
+    padding: 0 1rem;
+    text-align: center;
+}
+.input-field {
+    display: flex;
+    flex-flow: column;
+    padding-top: 2rem;
+}
+.input-field > input {
+    
+    padding: .5rem;
+    max-width: 320px;
+    font-size: 1.25rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--border-color);
+}
+.input-field > input:focus {
+    border-bottom: 1px solid var(--primary-color);
+}
+.form-actions {
+    text-align: right;
+    margin-top: 2rem;
+}

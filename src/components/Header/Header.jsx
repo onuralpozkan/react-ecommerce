@@ -19,7 +19,9 @@ const Header = () => {
         <Link to="/">Brand</Link>
       </span>
       <span className="login">
+        <Link to="/login">
         <i className="las la-user"></i>
+        </Link>
       </span>
       <span className="cart">
         <Link to="/cart">
