@@ -35,7 +35,7 @@
 }
 .login,.cart {
     padding: .5rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 .menu {
@@ -48,6 +48,33 @@
     font-size: 1.5rem;
     margin-right: .5rem;
 }
+
+.cart {
+    position: relative;
+    
+}
+.cart a {
+    color: var(--cart-color);
+}
+.cartInfo {
+    position: absolute;
+    top: .25rem;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 88;
+    font-size: .75rem;
+    background-color: hotpink;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: greenyellow;
+}
+
+
+
+
 @media screen and (max-width:599px) {
     .menu span {
         display: none;
