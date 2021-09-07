@@ -1,15 +1,18 @@
-
 import { currencySymbol } from "../../utils/currencySymbol";
 import { Button } from "../Common/Button";
 import "./FilledCart.css";
 const FilledCart = ({ products, deleteProduct }) => {
-  const totalAmount = products.reduce((prev,next) => (prev + parseInt(next.productCount)), 0)
-  const totalPrice = products.reduce((prev,next) => (prev + parseFloat(next.product.unitPrice * next.productCount)), 0)
-  console.log('totalPC',totalPrice);
+  const totalAmount = products.reduce(
+    (prev, next) => prev + parseInt(next.productCount),
+    0
+  );
+  const totalPrice = products.reduce(
+    (prev, next) =>
+      prev + parseFloat(next.product.unitPrice * next.productCount),
+    0
+  );
   return (
     <table className="productTable">
-
-      
       <thead>
         <tr>
           <th>Ürün Adı</th>
@@ -36,23 +39,17 @@ const FilledCart = ({ products, deleteProduct }) => {
       </tbody>
       <tfoot>
         <tr>
-          <th colSpan="4" style={{textAlign:'right'}}>Sipariş Özeti</th>
+          <th colSpan="4" style={{ textAlign: "right" }}>
+            Sipariş Özeti
+          </th>
         </tr>
         <tr>
-          <td colSpan="2">
-            Total Ürün:
-          </td>
-          <td colSpan="2">
-            {totalAmount}
-          </td>
+          <td colSpan="2">Total Ürün:</td>
+          <td colSpan="2">{totalAmount}</td>
         </tr>
         <tr>
-          <td colSpan="2">
-            Total Tutar:
-          </td>
-          <td colSpan="2">
-            {currencySymbol(totalPrice)}
-          </td>
+          <td colSpan="2">Total Tutar:</td>
+          <td colSpan="2">{currencySymbol(totalPrice)}</td>
         </tr>
       </tfoot>
     </table>

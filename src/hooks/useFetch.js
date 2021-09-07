@@ -9,14 +9,13 @@ const useFetch = (url) => {
     try {
       const response = await axios.get(url);
       const apiData = response?.data;
-      console.log("res", response);
       if (response.status === 200) {
         setData(apiData);
         setIsLoading(false);
       }
     } catch (e) {
       setError(e);
-      console.log(e);
+      console.log('Error:',e);
     }
   };
   useEffect(() => {

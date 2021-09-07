@@ -10,14 +10,8 @@ import { addProductToCart } from "../store/Actions/cartActions";
 const ProductDetail = () => {
   let { productId } = useParams();
 
-  console.log("productId", productId);
-  // useEffect(() => {
-  //   dispatch(getProductById(productId));
-  // }, [dispatch]);
-
   const { products, isLoading } = useProducts();
   const product = products.filter((item) => item.id == productId);
-  console.log("prodct", product);
 
   let stock = product[0]?.unitsInStock;
   const handleCount = (count) => {
@@ -34,8 +28,7 @@ const ProductDetail = () => {
 
   const dispatch = useDispatch();
   const addToCart = () => {
-    console.log("Add To Cart");
-    dispatch(addProductToCart({product: product[0], productCount}))
+    dispatch(addProductToCart({ product: product[0], productCount }));
   };
 
   const history = useHistory();
@@ -61,7 +54,10 @@ const ProductDetail = () => {
             text={product[0]?.productName}
             cssClass="text-large text-bold"
           />
-          <CustomText text={product[0]?.description} cssClass="text text-medium" />
+          <CustomText
+            text={product[0]?.description}
+            cssClass="text text-medium"
+          />
           <div className="detail-count">
             <i className="las la-minus" onClick={() => handleCount(-1)}></i>
             <input
