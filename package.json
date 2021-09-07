@@ -1,6 +1,10 @@
 {
-  "name": "task-management",
-  "version": "0.1.0",
+  "name": "react-ecommerce",
+  "author": {
+    "name": "Onuralp Özkan",
+    "email": "onuralpozkan01@gmail.com"
+  },
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^0.16.3"
   }
 }
