@@ -31,9 +31,11 @@ To learn Redux, check out the [Redux documentation](https://redux.js.org/).
 
 ### Dependencies
 
-For spinner component, check out [React CSS Only Spinner](https://www.npmjs.com/package/react-css-spinners).
-
 For json-server, check out [Json Server](https://www.npmjs.com/package/json-server).
+
+For fetching data, check out [Axios](https://www.npmjs.com/package/axios).
+
+For spinner component, check out [React CSS Only Spinner](https://www.npmjs.com/package/react-css-spinners).
 
 # Description
 
