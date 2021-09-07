@@ -7,6 +7,8 @@ import { CustomText } from "../Common/CustomText";
 import { addProductToCart } from "../../store/Actions/cartActions";
 import { currencySymbol } from "../../utils/currencySymbol";
 
+import { Ripple } from 'react-css-spinners'
+
 const ProductCard = ({
  product,
   isLoading,
@@ -22,7 +24,7 @@ const ProductCard = ({
     <Link className="card-link" to={`/product-detail/${product.id}`}>
         <div className="card-header">
           {
-            isLoading ? "Yükleniyor..." :
+            isLoading ? <div className="ripple"><Ripple color="#444546" size={100} thickness={5} /></div>:
           <img
             src={`/assets/images/products/generic_${product.id % 4}.jpg`}
             alt="Product Name"
@@ -30,11 +32,14 @@ const ProductCard = ({
           }
         </div>
         <div className="card-body">
+          {isLoading ? <div className="ripple"><Ripple color="#444546" size={100} thickness={5} /></div> : <> 
           <CustomText
             cssClass="text text-bold text-large text-ellipsis"
-            text={isLoading ? "...Loading" : product.productName}
+            text={product.productName}
           />
           <CustomText cssClass="text text-ellipsis" text={product.description} />
+          
+          </>}
         </div>
           </Link>
         <div className="card-footer">
