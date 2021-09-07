@@ -17,6 +17,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Fake Rest Api with Json-Server will start at port 8000.\
 Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
+#### Endpoints
+
+Base Url: http://localhost:8000
+Categories: **/categories**
+Products: **/products**
+
 ## Tech Stack
 
 - HTML
