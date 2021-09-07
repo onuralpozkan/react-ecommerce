@@ -1,66 +1,44 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { imageUrls } from "./images.js";
+import Slide from "./Slide";
 import "./Slider.css";
 
 const Slider = () => {
-  const [images, setImages] = useState([]);
-  const [dots, setDots] = useState([]);
-  useEffect(() => {
-    setImages(document.querySelectorAll("img"));
-    setDots(document.querySelectorAll(".dot"));
-  }, []);
-
-  let imgIndex = 0;
-  const handleSlideChange = (dir) => {
-    if (dir > 0) {
-      imgIndex = imgIndex < images.length - 1 ? imgIndex + 1 : 0;
-    } else {
-      imgIndex = imgIndex > 0 ? imgIndex - 1 : images.length - 1;
-    }
-    images.forEach((slide) => (slide.className = ""));
-    images[imgIndex].classList.add("active");
-    dots.forEach((dot) => (dot.className = "dot"));
-    dots[imgIndex].classList.add("fill");
+  let dots = [];
+  for (let i = 0; i < imageUrls.length; i++) {
+    dots.push("dot");
+  }
+  const [imgIndex, setImgIndex] = useState(0);
+  const changeImg = (n) => {
+    setImgIndex((state) =>
+      state + n < 0
+        ? imageUrls.length - 1
+        : state + n > imageUrls.length - 1
+        ? 0
+        : state + n
+    );
   };
 
+  const imgDots = dots.map((dot, index) => <span key={index} className={`${dot} ${index == imgIndex ? 'fill' : ''}`}></span>)
+  const slides = imageUrls.map((image, index) => <Slide key={index} {...image} imgIndex={{imgIndex, index}} />)
   return (
     <div className="slider-container">
-      <Link to="/categories/beverages-1">
-        <img
-          className="active"
-          src="/assets/images/slider_images/beverages.jpg"
-          alt="Beverages"
-        />
-      </Link>
-      <Link to="/categories/condiments-2">
-        <img
-          src="/assets/images/slider_images/condiments.jpg"
-          alt="Condiments"
-        />
-      </Link>
-      <Link to="/categories/electronics-9">
-        <img
-          src="/assets/images/slider_images/electronics.jpg"
-          alt="Electronics"
-        />
-      </Link>
+      {slides}      
 
       <button
-        onClick={() => handleSlideChange(-1)}
+        onClick={() => changeImg(-1)}
         className="changeSlide prev"
       >
         <i class="las la-angle-left"></i>
       </button>
       <button
-        onClick={() => handleSlideChange(+1)}
+        onClick={() => changeImg(+1)}
         className="changeSlide next"
       >
         <i class="las la-angle-right"></i>
       </button>
       <div class="dots">
-        <span className="dot fill"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
+       {imgDots}
       </div>
     </div>
   );
