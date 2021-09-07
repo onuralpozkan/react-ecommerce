@@ -39,6 +39,6 @@ For json-server, check out [Json Server](https://www.npmjs.com/package/json-serv
 
 This is a react project for practice. It uses **Redux** for state management which used for getting products from fake api server and managing cart operations.
 
-It is alse uses custom hooks, **useFetch** for getting categories from fake api server.
+It is also uses custom hooks, **useFetch** for getting categories from fake api server.
 
 
