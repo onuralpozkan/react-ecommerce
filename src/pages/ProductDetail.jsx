@@ -9,22 +9,24 @@ import { Button } from "../components/Common/Button";
 import { addProductToCart } from "../store/Actions/cartActions";
 const ProductDetail = () => {
   let { productId } = useParams();
-
   const { products, isLoading } = useProducts();
   const product = products.filter((item) => item.id == productId);
-
   let stock = product[0]?.unitsInStock;
+  const [productCount, setProductCount] = useState(stock == 0 ? 0 : 1);
+
   const handleCount = (count) => {
-    if (count > 0) {
-      setProductCount((p) => (p < stock ? p + 1 : stock));
+    if (count == 1) {
+      console.log('product count',productCount);
+      
+      stock++;
+      console.log('stock',stock);
+      setProductCount(p => p + 1);
     }
-    if (count < 0) {
-      setProductCount((p) => (p > 1 ? p - 1 : 1));
+    if (count == -1) {
+      setProductCount((p) => (p - 1));
     }
     if (stock == 0) setProductCount(0);
   };
-
-  const [productCount, setProductCount] = useState(stock === 0 ? 0 : 1);
 
   const dispatch = useDispatch();
   const addToCart = () => {
@@ -59,15 +61,25 @@ const ProductDetail = () => {
             cssClass="text text-medium"
           />
           <div className="detail-count">
-            <i className="las la-minus" onClick={() => handleCount(-1)}></i>
+            <i className="las la-minus" onClick={() => setProductCount(p => {
+              if(p > 0) {
+                return p - 1
+              }
+              return 0
+            })}></i>
             <input
               type="text"
               name="productCount"
-              value={productCount}
+              value={stock == 0 ? stock : productCount}
               disabled
               onChange={(e) => setProductCount(e.target.count)}
             />
-            <i className="las la-plus" onClick={() => handleCount(+1)}></i>
+            <i className="las la-plus" onClick={() => setProductCount(p => {
+              if(stock > p) {
+                return p + 1
+              }
+              return stock
+            })}></i>
           </div>
           <div className="detail-stock">
             <p>Products in Stock: {stock}</p>

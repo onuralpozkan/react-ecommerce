@@ -7,15 +7,14 @@ import "./Home.css";
 const Home = () => {
   const { pathname } = useLocation();
   const categoryId = pathname.split("-").slice(-1).pop();
-  
+
   return (
     <Layout>
       <main className="main">
         <Slider />
-        <ProductGroup
-          categoryId={pathname == '/' ? false 
-          : categoryId}
-        />
+        <div className="products-main-container">
+          <ProductGroup categoryId={pathname == "/" ? false : categoryId} />
+        </div>
       </main>
     </Layout>
   );
