@@ -29,15 +29,15 @@ const Slider = () => {
         onClick={() => changeImg(-1)}
         className="changeSlide prev"
       >
-        <i class="las la-angle-left"></i>
+        <i className="las la-angle-left"></i>
       </button>
       <button
         onClick={() => changeImg(+1)}
         className="changeSlide next"
       >
-        <i class="las la-angle-right"></i>
+        <i className="las la-angle-right"></i>
       </button>
-      <div class="dots">
+      <div className="dots">
        {imgDots}
       </div>
     </div>

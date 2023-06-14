@@ -1,5 +1,5 @@
-import axios from "axios";
 import * as actionTypes from "./actionTypes";
+import data from "../api/db.json";
 
 export const fetchProductsBegin = () => {
   return {
@@ -22,9 +22,7 @@ export const fetchProducts = () => {
   return async (dispatch) => {
     try {
       dispatch(fetchProductsBegin());
-      const url = "http://localhost:8000/products";
-      const response = await axios.get(url);
-      const apiData = response?.data;
+      const apiData = data.products;
       dispatch({
         type: actionTypes.FETCH_PRODUCTS_SUCCESS,
         payload: apiData,

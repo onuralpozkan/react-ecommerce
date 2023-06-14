@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const bars = <i class="las la-bars"></i>;
-  const times = <i class="las la-times"></i>;
+  const bars = <i className="las la-bars"></i>;
+  const times = <i className="las la-times"></i>;
 
   const state = useSelector((state) => state.cartReducer);
 
@@ -26,7 +26,7 @@ const Header = () => {
         </span>
         <span className="cart">
           <Link to="/cart">
-            <i class="las la-shopping-cart"></i>
+            <i className="las la-shopping-cart"></i>
           </Link>
           {state.length !== 0 && (
             <span className="cartInfo">{state.length}</span>

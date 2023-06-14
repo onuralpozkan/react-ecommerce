@@ -1,7 +1,7 @@
-import useFetch from "../../hooks/useFetch";
 import useProducts from "../../hooks/useProducts";
 import { CustomText } from "../Common/CustomText";
 import ProductCard from "../PorductCard/ProductCard";
+import data from '../../store/api/db.json';
 import "./ProductGroup.css";
 
 const ProductGroup = ({ categoryId }) => {
@@ -11,8 +11,7 @@ const ProductGroup = ({ categoryId }) => {
     ? products.filter((i) => i.categoryId == categoryId)
     : products;
 
-  const { data } = useFetch("http://localhost:8000/categories");
-  let category = data.filter((item) => item.id == categoryId);
+  let category = data.categories.filter((item) => item.id == categoryId);
 
   return (
     <div className="productGroup">
